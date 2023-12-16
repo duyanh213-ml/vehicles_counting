@@ -15,7 +15,7 @@ def get_box_info(box):
     return x, y, w, h, center_X, center_Y
 
 
-def is_touch_line(center_y, line_y, epsilon = 3):
+def is_touch_line(center_y, line_y, epsilon = 7):
     return abs(center_y - line_y) < epsilon
     
 
@@ -75,9 +75,6 @@ while ret:
                 
                 cv2.circle(frame, (center_X, center_Y), 3, (0, 0, 255), -1)
                 
-                if is_touch_line(center_Y, 500):
-                    laser_line_color = (0, 150, 0)
-                    car_counting += 1
                 
                 tracker = cv2.TrackerKCF.create()
                 tracker.init(frame, (int(xyxy[0]), int(xyxy[1]), width, height))
@@ -104,6 +101,7 @@ while ret:
             if is_touch_line(center_Y, 500):    
                 car_counting += 1
                 laser_line_color = (0, 150, 0)
+                trackers_list.remove(tracker)
                 
                 
     cv2.line(frame, (100, 500), (1200, 500), laser_line_color, 3)   
