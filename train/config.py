@@ -6,7 +6,7 @@ Latest update: 12-07-23
 """
 
 
-
+# Import libraries
 import os
 
 # This code will get the absolute path of the /vehicles_counting, you don't need

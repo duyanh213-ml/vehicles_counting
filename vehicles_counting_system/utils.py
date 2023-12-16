@@ -1,3 +1,12 @@
+"""
+===========================================================================================================
+Latest update: 12-10-23 
+@author: anhnd
+===========================================================================================================
+
+"""
+
+# Import libraries
 import cv2
 from config import *
 
@@ -86,7 +95,7 @@ def implement_system(torch_model, video_path, origin_line_color=ORIGIN_LINE_COLO
                     
         cv2.line(frame, (line_x0, line_y0), (line_x1, line_y0), 
                 color=laser_line_color, thickness=line_thickness)   
-        # Using cv2.putText() method 
+
         frame = cv2.putText(frame, f'Number of vehicles: {car_counting}', org=text_org, 
                 fontScale=text_fontScale, color=text_color, 
                 thickness=text_thickness, fontFace=text_font)     

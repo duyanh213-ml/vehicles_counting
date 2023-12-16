@@ -13,7 +13,7 @@ for model training. The remaining amount is for testing.
 
 """
 
-
+# Import libraries
 from ultralytics import YOLO
 import os
 from config import *
