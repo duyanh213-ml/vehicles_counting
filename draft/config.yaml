@@ -1,5 +1,0 @@
-train: /content/dataset_draft/train/images
-val: /content/dataset_draft/val/images
- 
-nc: 1
-names: ['vehicles']

@@ -15,7 +15,7 @@ def get_box_info(box):
     return x, y, w, h, center_X, center_Y
 
 
-def is_touch_line(center_y, line_y, epsilon = 7):
+def is_touch_line(center_y, line_y, epsilon = 10):
     return abs(center_y - line_y) < epsilon
     
 
@@ -53,7 +53,7 @@ thickness = 2
 while ret:
     laser_line_color = (0, 0, 200)
     
-    if count % 10 == 0:
+    if count % 8 == 0:
         if len(trackers_list) != 0:
             trackers_list.clear()
             

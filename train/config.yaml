@@ -1,0 +1,4 @@
+train: /home/anhnd/Workspace/vehicles_counting/dataset/train/images
+val: /home/anhnd/Workspace/vehicles_counting/dataset/val/images
+nc: 1
+names: ['vehicles']
